@@ -1,0 +1,123 @@
+/* ============================================================
+   多章节扩展：首页、章节切换、图集
+   ============================================================ */
+.side-home {
+  display: inline-flex; align-items: center; gap: 7px;
+  align-self: flex-start;
+  font-size: 11px; letter-spacing: .08em; color: var(--muted);
+  text-decoration: none; padding: 5px 9px; border: 1px solid var(--line);
+  border-radius: 99px; transition: all .18s;
+}
+.side-home:hover { color: var(--red); border-color: var(--yolk); background: var(--paper-2); }
+
+.chapter-pager {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px;
+  font-size: 12px;
+}
+.chapter-pager a { color: var(--ink-2); text-decoration: none; }
+.chapter-pager a:hover { color: var(--red); }
+.chapter-pager .disabled { color: var(--line-2); }
+
+/* ---------- 首页 ---------- */
+.home-wrap { width: min(1180px, calc(100% - 64px)); margin: 0 auto; }
+.home-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 0; border-bottom: 1px solid var(--line);
+}
+.home-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.home-brand .brand-mark { width: 40px; height: 40px; font-size: 15px; }
+.home-brand b { font-family: var(--serif); font-size: 16px; display: block; }
+.home-brand span { font-size: 9.5px; letter-spacing: .18em; color: var(--muted); text-transform: uppercase; }
+.home-nav .meta { font-size: 11px; color: var(--muted); letter-spacing: .08em; }
+
+.home-hero { padding: 76px 0 46px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: end; }
+.home-hero h1 {
+  font-family: var(--serif); font-size: clamp(40px, 5vw, 74px);
+  line-height: 1.02; letter-spacing: -.03em; margin: 16px 0 18px;
+}
+.home-hero h1 em { font-style: normal; color: var(--red); }
+.home-hero p { font-family: var(--serif); font-size: 18px; line-height: 1.8; color: var(--ink-2); max-width: 56ch; }
+.home-hero .hero-kicker { margin-bottom: 6px; }
+.home-hero aside {
+  border-left: 3px solid var(--yolk); padding: 6px 0 6px 22px;
+  font-size: 13px; color: var(--muted); line-height: 1.9;
+}
+.home-hero aside b { color: var(--ink); font-family: var(--serif); font-size: 16px; display: block; margin-bottom: 4px; }
+
+.chapter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px 0 40px; }
+.chapter-card {
+  display: flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  background: var(--paper-2); border: 1px solid var(--line);
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+  overflow: hidden;
+}
+.chapter-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--line-2); color: var(--ink); }
+.chapter-card .cover { aspect-ratio: 4 / 3; overflow: hidden; background: var(--paper-3); }
+.chapter-card .cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.chapter-card:hover .cover img { transform: scale(1.03); }
+.chapter-card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+.chapter-card--intro { grid-column: 1 / -1; flex-direction: row; }
+.chapter-card--intro .cover { flex: 0 0 42%; aspect-ratio: auto; min-height: 250px; }
+.chapter-card--intro .body { justify-content: center; padding: 28px 34px; }
+.chapter-card--intro h2 { font-size: 28px; }
+.chapter-card--intro p { max-width: 62ch; font-size: 13.5px; }
+.chapter-card .num { font-size: 10px; letter-spacing: .18em; color: var(--red); font-weight: 700; text-transform: uppercase; }
+.chapter-card h2 { font-family: var(--serif); font-size: 21px; line-height: 1.4; margin: 5px 0 6px; }
+.chapter-card .en { font-size: 10.5px; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; line-height: 1.5; }
+.chapter-card p { font-size: 12.5px; line-height: 1.75; color: var(--muted); margin: 10px 0 14px; flex: 1; }
+.chapter-card .stats { display: flex; gap: 12px; font-size: 11px; color: var(--ink-2); border-top: 1px solid var(--line); padding-top: 10px; }
+.chapter-card .stats b { font-family: var(--serif); color: var(--red); }
+
+.home-note {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  padding: 26px 0 50px; border-top: 1px solid var(--line);
+}
+.home-note div { background: rgba(255,253,247,.6); border: 1px solid var(--line); padding: 18px 20px; }
+.home-note h3 { font-size: 15px; margin: 0 0 6px; }
+.home-note p { font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.8; }
+
+/* ---------- 章节页 ---------- */
+.hero--chapter { min-height: 72vh; }
+.hero--chapter .hero-lede { max-width: 58ch; }
+.hero--chapter .stamp { bottom: 6%; }
+.chapter-art .art-main { width: 62%; }
+.chapter-art .art-photo { width: 58%; }
+
+.figs--all { grid-template-columns: repeat(3, 1fr); }
+.figs--all .fig { max-width: none; margin: 0; }
+.figs--all .fig img { aspect-ratio: 4 / 3; object-fit: cover; }
+.figs--all .fig--wide { grid-column: auto; max-width: none; }
+
+.unit-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border: 1px solid var(--line);
+  border-radius: 99px; font-size: 11px; color: var(--muted);
+  background: rgba(255,253,247,.7);
+}
+
+@media (max-width: 1180px) {
+  .chapter-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-hero { grid-template-columns: 1fr; align-items: start; }
+  .home-hero aside { border-left: 0; border-top: 1px solid var(--line); padding: 16px 0 0; }
+}
+@media (max-width: 960px) {
+  .home-wrap { width: calc(100% - 36px); }
+  .chapter-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .home-hero { padding: 46px 0 30px; }
+  .figs--all { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .home-wrap { width: calc(100% - 28px); }
+  .chapter-grid { grid-template-columns: 1fr; }
+  .chapter-card--intro { flex-direction: column; }
+  .chapter-card--intro .cover { flex: none; min-height: 0; aspect-ratio: 4 / 3; }
+  .chapter-card--intro .body { padding: 18px 20px 20px; }
+  .chapter-card--intro h2 { font-size: 22px; }
+  .home-note { grid-template-columns: 1fr; }
+  .home-hero h1 { font-size: 40px; }
+  .figs--all { grid-template-columns: 1fr; }
+}
+@media print {
+  .side-home, .chapter-pager, .figs--all { display: none !important; }
+}

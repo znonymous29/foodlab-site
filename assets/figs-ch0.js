@@ -1,0 +1,18 @@
+window.CHAPTER_FIGS = {
+  "001": { src: "assets/ch0web/img-001.webp", caption: "第 22 页 · 原书插图" },
+  "002": { src: "assets/ch0web/img-002.webp", caption: "第 28 页 · 原书插图" },
+  "003": { src: "assets/ch0web/img-003.webp", caption: "第 62 页 · 原书插图" },
+  "004": { src: "assets/ch0web/img-004.webp", caption: "第 63 页 · 原书插图" },
+  "005": { src: "assets/ch0web/img-005.webp", caption: "第 65 页 · 原书插图" },
+  "006": { src: "assets/ch0web/img-006.webp", caption: "第 66 页 · 原书插图" },
+  "007": { src: "assets/ch0web/img-007.webp", caption: "第 78 页 · 原书插图" },
+  "008": { src: "assets/ch0web/img-008.webp", caption: "第 82 页 · 原书插图" },
+  "009": { src: "assets/ch0web/img-009.webp", caption: "第 100 页 · 原书插图" },
+  "010": { src: "assets/ch0web/img-010.webp", caption: "第 103 页 · 原书插图" },
+  "011": { src: "assets/ch0web/img-011.webp", caption: "第 104 页 · 原书插图" },
+  "012": { src: "assets/ch0web/img-012.webp", caption: "第 106 页 · 原书插图" },
+  "013": { src: "assets/ch0web/img-013.webp", caption: "第 106 页 · 原书插图" },
+  "014": { src: "assets/ch0web/img-014.webp", caption: "第 108 页 · 原书插图" },
+  "015": { src: "assets/ch0web/img-015.webp", caption: "第 108 页 · 原书插图" },
+  "016": { src: "assets/ch0web/img-016.webp", caption: "第 127 页 · 原书插图" },
+};
